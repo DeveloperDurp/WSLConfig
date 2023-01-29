@@ -3,8 +3,12 @@
   become: no
   vars_prompt:
 
-  - name: token
+  - name: gltoken
     prompt: What is your Gitlab personall Access Token?
+    private: yes
+
+  - name: ghtoken
+    prompt: What is your Github personall Access Token?
     private: yes
 
   roles:

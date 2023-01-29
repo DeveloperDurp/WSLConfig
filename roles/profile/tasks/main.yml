@@ -39,4 +39,7 @@
     state: directory   
 
 - name: Configure Gitlab SSH Key
-  ansible.builtin.command: pwsh -f ./scripts/configure-gitlab-ssh.ps1 "{{ token }}"      
+  ansible.builtin.command: pwsh -f ./scripts/configure-gitlab-ssh.ps1 "{{ gltoken }}"
+
+- name: Configure Github SSH Key
+  ansible.builtin.command: pwsh -f ./scripts/configure-github-ssh.ps1 "{{ ghtoken }}"
