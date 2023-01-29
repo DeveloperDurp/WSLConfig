@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  become: no
+  vars_prompt:
+
+  - name: token
+    prompt: What is your Gitlab personall Access Token?
+    private: yes
+
+  roles:
+    - packages
+    - profile
+
+
